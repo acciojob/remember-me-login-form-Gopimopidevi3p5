@@ -22,6 +22,7 @@ form.addEventListener("submit", function (e) {
       localStorage.clear();
       existing.style.display = "none";
     }
+	e.target.reset()
   })
 
   existing.addEventListener("click", ()=> {
