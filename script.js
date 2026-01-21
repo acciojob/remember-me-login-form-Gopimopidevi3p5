@@ -1,6 +1,9 @@
 //your JS code here. If required.
 const form = document.querySelector("form");
 const existingBtn = document.getElementById("existing");
+if(localStorage.getItem("user")){
+	existingBtn.style.display = "block";
+}
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
 	const username = e.target.username.value;
@@ -19,5 +22,8 @@ form.addEventListener('submit', (e) => {
 
 existingBtn.addEventListener('click', () => {
 	const user = JSON.parse(localStorage.getItem('user'));
+	document.getElementById("username").value=user.username
+	document.getElementById("password").value=user.password
+	document.getElementById("checkbox").checked=true
 	alert(`Logged in as ${user.username}`)
 })
