@@ -9,9 +9,8 @@ form.addEventListener("submit", function (e) {
     const user = e.target.username.value;
     const pass = e.target.password.value;
 	const checkbox = e.target.checkbox
-	console.log(user, pass, checkbox);
 
-    alert(`Logged in as ${user}, ${checkbox.checked}`);
+    alert(`Logged in as ${user}`);
 	
 
     if (checkbox.checked) {
